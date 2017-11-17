@@ -10,5 +10,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         System.out.println("Testing Dev Branch");
+
+        User client = new User();
+        Medication med = new Medication();
+        Community friends = new Community();
     }
+
+
 }
