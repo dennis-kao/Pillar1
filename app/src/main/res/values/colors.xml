@@ -8,4 +8,5 @@
     <color name="mti_default_accent">#FFC107</color>
     <color name="accent">#FFC107</color>
     <color name="colorAccent">#FFC107</color>
+    <color name="lightGrey">#efefef</color>
 </resources>

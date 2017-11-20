@@ -2,6 +2,8 @@ package james.mosley.com.pillar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +16,14 @@ public class MainActivity extends AppCompatActivity {
         User client = new User();
         Medication med = new Medication();
         Community friends = new Community();
-    }
 
+        //sets up recycler view
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        MedicationListAdapter adapter = new MedicationListAdapter();
+        recyclerView.setAdapter(adapter);
+    }
 
 }
