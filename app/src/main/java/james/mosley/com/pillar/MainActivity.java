@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
         User client = new User();
         Medication med = new Medication();
         Community friends = new Community();
+        PillarAPI pillarAPI = new PillarAPI();
+
+        pillarAPI.testCall();
 
         //sets up recycler view
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);

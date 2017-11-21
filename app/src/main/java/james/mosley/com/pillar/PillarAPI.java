@@ -21,12 +21,10 @@ public class PillarAPI {
             .build();
 
 
-    private String url1 = "https://131.104.180.41:8000/";
-    private String url2 = "https://www.google.com";
-    private String url3 = "http://nicholaswebsitewebs-env.us-east-1.elasticbeanstalk.com/email.php";
-    private String url4 = "http://131.104.180.41:8000/";
+    private String url1 = "http://131.104.180.41:8000/";
 
     public void testCall() {
+        
         Request request = new Request.Builder()
                 .url(url1)
                 .build();
