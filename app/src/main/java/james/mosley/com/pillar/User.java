@@ -1,14 +1,13 @@
 package james.mosley.com.pillar;
 
 import java.util.ArrayList;
-import java.util.Date;
 
+import james.mosley.com.pillar.Shared.UserType;
 
 
 public class User {
 
     //Types of users
-    public enum UserType {PARTICIPANT, STAFF, ADMIN}
 
     //User info.
     private String firstName;
@@ -17,13 +16,13 @@ public class User {
     private String phoneNum;
     private String password;
     private UserType type;
-    private Date lastLogin;
+    private String lastLogin;
     private int userID;
     private ArrayList<Medication> medications;
     //photo, not sure how to do
 
     public User(String firstName, String lastName, String email, String phoneNum, String password,
-                    UserType type, Date lastLogin, int userID) {
+                    UserType type, String lastLogin, int userID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -35,7 +34,7 @@ public class User {
         this.medications = new ArrayList<>();
     }
 
-    public Date getLastLogin() {
+    public String getLastLogin() {
         return lastLogin;
     }
 

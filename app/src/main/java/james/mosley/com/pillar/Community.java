@@ -1,8 +1,6 @@
 package james.mosley.com.pillar;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import java.util.*;
+import java.util.ArrayList;
 
 public class Community {
 
@@ -23,9 +21,9 @@ public class Community {
         return true;
     }
 
-    public User searchUser (String name, User.UserType type, int id, String email, String phoneNum) {
-
-        return new User();
-    }
+//    public User searchUser (String name, User.UserType type, int id, String email, String phoneNum) {
+//
+//        return new User();
+//    }
 
 }

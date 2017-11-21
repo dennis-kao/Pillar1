@@ -5,8 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import james.mosley.com.pillar.Shared.SessionInformation;
 import james.mosley.com.pillar.Shared.PillarAPI;
+import james.mosley.com.pillar.Shared.SessionInformation;
+import james.mosley.com.pillar.Shared.UserType;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        User creator = new User();
+        String date = "20170101";
+
+        User newUser = new User("John","Doe","jd@pillar.ca","123-456-789","password", UserType.PARTICIPANT,date,1);
+        SessionInformation sessionInformation = new SessionInformation("null","5","token","neverlol", UserType.ADMIN.toString());
+
         Medication med = new Medication();
         Community friends = new Community();
 
@@ -23,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         PillarAPI pillarAPI = new PillarAPI();
         pillarAPI.testCall();
 
-        //Boolean status = pillarAPI.createAccount(creator, "test@gmail.com", "password", "CLC Client");
-        SessionInformation temp = pillarAPI.login("test","thing");
+        //Boolean status = pillarAPI.createAccount(newUser,sessionInformation);
+        SessionInformation temp = pillarAPI.login("God","thing");
 
 
 

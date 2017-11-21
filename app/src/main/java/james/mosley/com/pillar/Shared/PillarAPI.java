@@ -54,17 +54,31 @@ public class PillarAPI {
         });
     }
 
-    public Boolean createAccount(User creator, String email, String password, String accountType) {
+    public Boolean createAccount(User newUser, SessionInformation sessionInformation) {
         done = false;
         result = false;
         toReturn = null;
         String url = baseURL+"users/createAccount";
 
-        Map<String, String> params = new HashMap<>();
-        params.put("email", email);
-        params.put("password", password);
-        params.put("accountType",accountType);
-        JSONObject jsonObject = new JSONObject(params);
+
+        JSONObject jsonObject = new JSONObject();
+        JSONObject newUserObject = new JSONObject();
+        try {
+            jsonObject.put("loginToken", sessionInformation.getLoginToken());
+            jsonObject.put("creator_id", sessionInformation.getUserID());
+
+            newUserObject.put("firstName",newUser.getFirstName());
+            newUserObject.put("lastName", newUser.getLastName());
+            newUserObject.put("phoneNum", newUser.getPhoneNum());
+            newUserObject.put("email",newUser.getEmail());
+            newUserObject.put("password",newUser.getPassword());
+            newUserObject.put("accountType",newUser.getType().toString());
+
+            jsonObject.put("new_user",newUserObject);
+
+        } catch (Exception e) {
+            Log.e("createAccountJSONCreation",e.getMessage());
+        }
 
         RequestBody body = RequestBody.create(JSON,jsonObject.toString());
         Request request = new Request.Builder()
