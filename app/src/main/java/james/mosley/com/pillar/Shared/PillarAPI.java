@@ -139,20 +139,27 @@ public class PillarAPI {
         });
         while (!done);
 
-        String error = null;
-        String userID = null;
-        String loginToken = null;
-        String loginTokenExpires = null;
-        String accountType = null;
+        String error = "";
+        String userID = "";
+        String loginToken = "";
+        String loginTokenExpires = "";
+        String accountType = "";
 
         try {
-            userID = toReturn.getString("userID");
-            loginToken = toReturn.getString("loginToken");
-            loginTokenExpires = toReturn.getString("loginTokenExpires");
-            accountType = toReturn.getString("accountType");
             error = toReturn.getString("error");
         } catch (JSONException e) {
             e.printStackTrace();
+        }
+
+        if(error.equalsIgnoreCase("null")) {
+            try {
+                userID = toReturn.getString("userID");
+                loginToken = toReturn.getString("loginToken");
+                loginTokenExpires = toReturn.getString("loginTokenExpires");
+                accountType = toReturn.getString("accountType");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
         SessionInformation sessionInformation = new SessionInformation(error,userID,loginToken,loginTokenExpires,accountType);
 

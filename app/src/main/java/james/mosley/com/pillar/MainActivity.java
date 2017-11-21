@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         pillarAPI.testCall();
 
         //Boolean status = pillarAPI.createAccount(creator, "test@gmail.com", "password", "CLC Client");
-        SessionInformation temp = pillarAPI.login("God","thing");
+        SessionInformation temp = pillarAPI.login("test","thing");
 
 
 
