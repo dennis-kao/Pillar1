@@ -24,6 +24,26 @@ public class SessionInformation {
         return error.equals("null");
     }
 
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public String getLoginToken() {
+        return loginToken;
+    }
+
+    public String getLoginTokenExpires() {
+        return loginTokenExpires;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
     @Override
     public String toString() {
         return "error = " + error
