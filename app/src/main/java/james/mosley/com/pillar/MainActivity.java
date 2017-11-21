@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
-import james.mosley.com.pillar.Models.LoginObject;
+import james.mosley.com.pillar.Shared.LoginObject;
+import james.mosley.com.pillar.Shared.PillarAPI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,17 +22,10 @@ public class MainActivity extends AppCompatActivity {
         //Testing API calls... Won't be in this activity for final version
         PillarAPI pillarAPI = new PillarAPI();
         pillarAPI.testCall();
-        try {
-            Boolean status = pillarAPI.createAccount("test@gmail.com", "password", "CLC Client");
-        } catch (Exception e) {
-            Log.e("createAccountError",e.getMessage());
-        }
 
-        try {
-            LoginObject temp = pillarAPI.login("God","thing");
-        } catch (Exception e) {
-            Log.e("LoginError",e.getMessage());
-        }
+        Boolean status = pillarAPI.createAccount("test@gmail.com", "password", "CLC Client");
+        LoginObject temp = pillarAPI.login("God","thing");
+
 
 
         //sets up recycler view

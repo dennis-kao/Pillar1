@@ -1,4 +1,4 @@
-package james.mosley.com.pillar.Models;
+package james.mosley.com.pillar.Shared;
 
 /**
  * Created by mosleyj on 2017-11-21.

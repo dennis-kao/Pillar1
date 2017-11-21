@@ -1,4 +1,4 @@
-package james.mosley.com.pillar;
+package james.mosley.com.pillar.Shared;
 
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import james.mosley.com.pillar.Models.LoginObject;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -54,10 +53,11 @@ public class PillarAPI {
         });
     }
 
-    public Boolean createAccount(String email, String password, String accountType) throws Exception {
+    public Boolean createAccount(String email, String password, String accountType) {
         done = false;
         result = false;
         toReturn = null;
+        String url = baseURL+"users/createAccount";
 
         Map<String, String> params = new HashMap<>();
         params.put("email", email);
@@ -67,7 +67,7 @@ public class PillarAPI {
 
         RequestBody body = RequestBody.create(JSON,jsonObject.toString());
         Request request = new Request.Builder()
-                .url(baseURL+"users/login")
+                .url(url)
                 .post(body)
                 .header("Content-Type", "application/json; charset=utf-8")
                 .build();
@@ -101,6 +101,7 @@ public class PillarAPI {
         result = false;
         done = false;
         toReturn = null;
+        String url = baseURL+"users/login";
 
         Map<String, String> params = new HashMap<>();
         params.put("email", email);
@@ -109,7 +110,7 @@ public class PillarAPI {
 
         RequestBody body = RequestBody.create(JSON,jsonObject.toString());
         Request request = new Request.Builder()
-                .url(baseURL+"users/login")
+                .url(url)
                 .post(body)
                 .header("Content-Type", "application/json; charset=utf-8")
                 .build();
