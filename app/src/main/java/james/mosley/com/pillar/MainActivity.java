@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         PillarAPI pillarAPI = new PillarAPI();
         pillarAPI.testCall();
 
-        Boolean status = pillarAPI.createAccount(creator, "test@gmail.com", "password", "CLC Client");
+        //Boolean status = pillarAPI.createAccount(creator, "test@gmail.com", "password", "CLC Client");
         SessionInformation temp = pillarAPI.login("God","thing");
 
 
