@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+import james.mosley.com.pillar.User;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -53,7 +54,7 @@ public class PillarAPI {
         });
     }
 
-    public Boolean createAccount(String email, String password, String accountType) {
+    public Boolean createAccount(User creator, String email, String password, String accountType) {
         done = false;
         result = false;
         toReturn = null;
@@ -82,7 +83,7 @@ public class PillarAPI {
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                Log.i("CreateAccountCall","Login Successful!");
+                Log.i("CreateAccountCall","Create Account Successful!");
                 try {
                     String resp = response.body().string();
                     JSONObject jsonObject = new JSONObject(resp);
@@ -97,7 +98,7 @@ public class PillarAPI {
         return result;
     }
 
-    public LoginObject login(String email, String password) {
+    public SessionInformation login(String email, String password) {
         result = false;
         done = false;
         toReturn = null;
@@ -145,15 +146,16 @@ public class PillarAPI {
         String accountType = null;
 
         try {
-            userID = toReturn.getString("id");
+            userID = toReturn.getString("userID");
             loginToken = toReturn.getString("loginToken");
             loginTokenExpires = toReturn.getString("loginTokenExpires");
             accountType = toReturn.getString("accountType");
+            error = toReturn.getString("error");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        LoginObject loginObject = new LoginObject(error,userID,loginToken,loginTokenExpires,accountType);
+        SessionInformation sessionInformation = new SessionInformation(error,userID,loginToken,loginTokenExpires,accountType);
 
-        return loginObject;
+        return sessionInformation;
     }
 }

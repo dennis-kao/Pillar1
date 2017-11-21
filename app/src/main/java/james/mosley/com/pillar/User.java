@@ -1,8 +1,7 @@
 package james.mosley.com.pillar;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 
 
@@ -20,7 +19,7 @@ public class User {
     private UserType type = UserType.PARTICIPANT;
     private Date lastLogin = null;
     private int userID = 0;
-    private ArrayList<Medication> medications = new ArrayList();
+    private ArrayList<Medication> medications = new ArrayList<>();
     //photo, not sure how to do
 
     public User() {

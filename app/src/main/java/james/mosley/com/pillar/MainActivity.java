@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import james.mosley.com.pillar.Shared.LoginObject;
+import james.mosley.com.pillar.Shared.SessionInformation;
 import james.mosley.com.pillar.Shared.PillarAPI;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        User client = new User();
+        User creator = new User();
         Medication med = new Medication();
         Community friends = new Community();
 
@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         PillarAPI pillarAPI = new PillarAPI();
         pillarAPI.testCall();
 
-        Boolean status = pillarAPI.createAccount("test@gmail.com", "password", "CLC Client");
-        LoginObject temp = pillarAPI.login("God","thing");
+        Boolean status = pillarAPI.createAccount(creator, "test@gmail.com", "password", "CLC Client");
+        SessionInformation temp = pillarAPI.login("God","thing");
 
 
 
