@@ -149,8 +149,6 @@ public class PillarAPI {
             loginToken = toReturn.getString("loginToken");
             loginTokenExpires = toReturn.getString("loginTokenExpires");
             accountType = toReturn.getString("accountType");
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
