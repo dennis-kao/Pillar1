@@ -6,7 +6,7 @@
     <color name="colorPrimaryDark">@color/primary_dark</color>
     <color name="mti_default_primary">@color/primary</color>
     <color name="mti_default_accent">#FFC107</color>
-    <color name="accent">#FFC107</color>
+    <color name="accent">#ffc107</color>
     <color name="colorAccent">#FFC107</color>
     <color name="lightGrey">#efefef</color>
 </resources>
