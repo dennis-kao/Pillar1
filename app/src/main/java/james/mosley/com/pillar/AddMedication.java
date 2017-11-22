@@ -173,7 +173,7 @@ public class AddMedication extends AppCompatActivity {
         Toast toast = Toast.makeText(getApplicationContext(), "Medication Successfully Added", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
-
+        finish();
     }
 
     //RadioButton Toggle.
