@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Medication {
 
-    public enum DosageType {MG, ML, PUFFS, PILLS, DROPS}
+    public static enum DosageType {MG, ML, PUFFS, PILLS, DROPS}
 
     //Medication information
     private int medID = 0;

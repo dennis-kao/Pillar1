@@ -1,5 +1,6 @@
 package james.mosley.com.pillar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         MedicationListAdapter adapter = new MedicationListAdapter();
         recyclerView.setAdapter(adapter);
+
+        Intent toAddmediacton = new Intent(this,AddMedication.class);
+        startActivity(toAddmediacton);
     }
 
 }
