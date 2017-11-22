@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="james.mosley.com.pillar.AddMedication">
+
+    <TextView
+        android:id="@+id/dosageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/notesText"
+        android:layout_below="@+id/mondayRadio"
+        android:layout_marginTop="20dp"
+        android:text="*Dosage:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+
+    <Spinner
+        android:id="@+id/dosageDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/dosageInput"
+        android:layout_below="@+id/mondayRadio"
+        android:layout_marginTop="20dp"
+        android:entries="@array/dosageType" />
+
+
+
+    <TextView
+        android:id="@+id/endDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/startDateText"
+        android:layout_alignBottom="@+id/startDateText"
+        android:layout_toEndOf="@+id/wednesdayRadio"
+        android:text="End Date:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/startDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hour"
+        android:layout_below="@+id/hour"
+        android:layout_marginTop="20dp"
+        android:text="*Start Date:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/timesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sundayRadio"
+        android:layout_below="@+id/dosageText"
+        android:layout_marginTop="20dp"
+        android:text="*Time(s):"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/saturdaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fridaytext"
+        android:layout_alignBottom="@+id/fridaytext"
+        android:layout_alignStart="@+id/saturdayRadio"
+        android:text="Sat" />
+
+    <TextView
+        android:id="@+id/fridaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/thursdaytext"
+        android:layout_alignBottom="@+id/thursdaytext"
+        android:layout_toRightOf="@+id/thursdaytext"
+        android:text="   Fri" />
+
+    <TextView
+        android:id="@+id/thursdaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/wednesdaytext"
+        android:layout_alignBottom="@+id/wednesdaytext"
+        android:layout_alignEnd="@+id/thursdayRadio"
+        android:text="Thurs" />
+
+    <TextView
+        android:id="@+id/wednesdaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/wednesdayRadio"
+        android:layout_alignStart="@+id/wednesdayRadio"
+        android:text="Wed" />
+
+    <TextView
+        android:id="@+id/tuesdayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mondaytext"
+        android:layout_alignBottom="@+id/mondaytext"
+        android:layout_alignStart="@+id/tuesdayRadio"
+        android:text="Tues" />
+
+    <TextView
+        android:id="@+id/mondaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mondayRadio"
+        android:layout_alignStart="@+id/mondayRadio"
+        android:text="Mon" />
+
+    <TextView
+        android:id="@+id/sundaytext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/daysText"
+        android:layout_below="@+id/daysText"
+        android:text=" Sun " />
+
+    <RadioButton
+        android:id="@+id/saturdayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/fridayRadio"
+        android:layout_alignBottom="@+id/fridayRadio"
+        android:layout_toRightOf="@+id/fridayRadio"
+        android:onClick="changeRadioButtons"/>
+
+    <RadioButton
+        android:id="@+id/fridayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/thursdayRadio"
+        android:layout_alignBottom="@+id/thursdayRadio"
+        android:layout_toRightOf="@+id/thursdayRadio"
+        android:onClick="changeRadioButtons"/>
+
+    <RadioButton
+        android:id="@+id/thursdayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/wednesdayRadio"
+        android:layout_alignBottom="@+id/wednesdayRadio"
+
+        android:layout_toRightOf="@+id/wednesdayRadio" />
+
+    <RadioButton
+        android:id="@+id/wednesdayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/tuesdayRadio"
+        android:layout_alignBottom="@+id/tuesdayRadio"
+        android:layout_toRightOf="@+id/tuesdayRadio"
+        android:onClick="changeRadioButtons"/>
+
+    <RadioButton
+        android:id="@+id/tuesdayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBaseline="@+id/mondayRadio"
+        android:layout_alignBottom="@+id/mondayRadio"
+        android:layout_toRightOf="@+id/mondayRadio"
+        android:onClick="changeRadioButtons"/>
+
+    <RadioButton
+        android:id="@+id/mondayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/sundaytext"
+        android:layout_toRightOf="@+id/sundayRadio"
+        android:onClick="changeRadioButtons"/>
+
+    <RadioButton
+        android:id="@+id/sundayRadio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sundaytext"
+        android:layout_below="@+id/sundaytext"
+        android:onClick="changeRadioButtons"/>
+
+    <TextView
+        android:id="@+id/daysText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameTextfield"
+        android:layout_below="@+id/nameTextfield"
+        android:layout_marginTop="20dp"
+        android:text="*Days:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/switch2"
+        android:layout_below="@+id/notificationTimeDD"
+        android:layout_marginTop="10dp"
+        android:text="*Name:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addMedToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="11dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_backarrow" />
+
+    <ImageButton
+        android:id="@+id/checkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/backButton"
+        android:layout_marginEnd="11dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_check"
+        android:onClick="medicationSubmitted" />
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkButton"
+        android:layout_centerHorizontal="true"
+        android:text="Add Medication"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/backButton"
+        android:layout_below="@+id/addMedToolbar"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="20dp"
+        android:text="Notification"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/notificationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/switch2"
+
+        android:layout_toStartOf="@+id/checkButton"
+        android:text="Notify Before (mins)"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/notificationTimeDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/notificationText"
+        android:layout_below="@+id/switch2"
+        android:entries="@array/timesOfNotification" />
+
+    <EditText
+        android:id="@+id/nameTextfield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/nameText"
+        android:layout_below="@+id/nameText"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter Name..."
+        android:textSize="18sp" />
+
+
+    <Spinner
+        android:id="@+id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timesText"
+        android:layout_below="@+id/timesText"
+        android:entries="@array/hours" />
+    <Spinner
+        android:id="@+id/minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hour"
+        android:layout_below="@+id/timesText"
+        android:entries="@array/minutes" />
+    <Spinner
+        android:id="@+id/am_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/minute"
+        android:layout_below="@+id/timesText"
+        android:entries="@array/am_pm" />
+
+    <ImageButton
+        android:id="@+id/startDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/startDateText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/startDateText"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        android:onClick="showCalendar"/>
+
+    <ImageButton
+        android:id="@+id/endDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/endDateText"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/endDateText"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar"
+        android:onClick="showCalendar" />
+
+    <TextView
+        android:id="@+id/notesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startDateText"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/switch2"
+        android:text="Notes:"
+        android:textColor="#ff212121"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/notesTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/saturdayRadio"
+        android:layout_alignStart="@+id/startDateText"
+        android:layout_below="@+id/notesText"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Enter Notes..." />
+
+    <EditText
+        android:id="@+id/dosageInput"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sundayRadio"
+        android:layout_toRightOf="@+id/dosageText"
+        android:layout_alignBaseline="@+id/dosageText"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:text="haroon salimi"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp" />
+
+</RelativeLayout>

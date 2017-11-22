@@ -2,6 +2,7 @@ package james.mosley.com.pillar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,9 +12,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         System.out.println("Testing Dev Branch");
 
-        User client = new User();
-        Medication med = new Medication();
-        Community friends = new Community();
+
+        Intent startAddActivity = new Intent(this, AddMedication.class);
+        startActivity(startAddActivity);
     }
 
 
