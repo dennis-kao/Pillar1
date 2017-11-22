@@ -18,6 +18,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okio.Buffer;
 
 
 /**
@@ -64,15 +65,15 @@ public class PillarAPI {
         JSONObject jsonObject = new JSONObject();
         JSONObject newUserObject = new JSONObject();
         try {
-            jsonObject.put("loginToken", sessionInformation.getLoginToken());
-            jsonObject.put("creator_id", sessionInformation.getUserID());
+            jsonObject.put("login_token", sessionInformation.getLoginToken());
+            jsonObject.put("creator_id", Integer.valueOf(sessionInformation.getUserID()));
 
-            newUserObject.put("firstName",newUser.getFirstName());
-            newUserObject.put("lastName", newUser.getLastName());
+            newUserObject.put("first_name",newUser.getFirstName());
+            newUserObject.put("last_name", newUser.getLastName());
             newUserObject.put("phoneNum", newUser.getPhoneNum());
             newUserObject.put("email",newUser.getEmail());
             newUserObject.put("password",newUser.getPassword());
-            newUserObject.put("accountType",newUser.getType().toString());
+            newUserObject.put("account_type",newUser.getType().toString());
 
             jsonObject.put("new_user",newUserObject);
 
@@ -87,6 +88,7 @@ public class PillarAPI {
                 .header("Content-Type", "application/json; charset=utf-8")
                 .build();
 
+        System.out.println(bodyToString(request));
 
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -167,10 +169,10 @@ public class PillarAPI {
 
         if(error.equalsIgnoreCase("null")) {
             try {
-                userID = toReturn.getString("userID");
-                loginToken = toReturn.getString("loginToken");
-                loginTokenExpires = toReturn.getString("loginTokenExpires");
-                accountType = toReturn.getString("accountType");
+                userID = toReturn.getString("user_id");
+                loginToken = toReturn.getString("login_token");
+                loginTokenExpires = toReturn.getString("login_token_expires");
+                accountType = toReturn.getString("account_type");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -179,4 +181,18 @@ public class PillarAPI {
 
         return sessionInformation;
     }
+
+
+    private static String bodyToString(final Request request){
+
+        try {
+            final Request copy = request.newBuilder().build();
+            final Buffer buffer = new Buffer();
+            copy.body().writeTo(buffer);
+            return buffer.readUtf8();
+        } catch (final IOException e) {
+            return "did not work";
+        }
+    }
+
 }
