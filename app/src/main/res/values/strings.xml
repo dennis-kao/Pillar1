@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pillar</string>
+    <string name="add_string">Add to Contacts</string>
+    <string name="cancel_string">Cancel pending request</string>
 </resources>
