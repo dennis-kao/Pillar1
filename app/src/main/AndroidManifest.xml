@@ -26,14 +26,15 @@
         <activity android:name=".ViewMedication" />
         <activity android:name=".AddMedication" />
         <activity android:name=".DatePopup" />
-
         <activity android:name=".ContactDetailActivity" />
-        <activity android:name=".CommunityActivity"/>
-
+        <activity android:name=".CommunityActivity" />
         <activity
             android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
-
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".NavDrawer"
+            android:label="@string/title_activity_nav_drawer"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

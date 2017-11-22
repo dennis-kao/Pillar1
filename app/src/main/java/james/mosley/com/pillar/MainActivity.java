@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         Boolean status = pillarAPI.createAccount(newUser,temp);
 
 
-
-
         //sets up recycler view
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
@@ -49,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(toAddmediacton);
 
 
-        Intent toLogin = new Intent(this, LoginActivity.class);
+        Intent toLogin = new Intent(this, NavDrawer.class);
         startActivity(toLogin);
 
         //Intent toAddmediacton = new Intent(this,AddMedication.class);
