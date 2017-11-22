@@ -7,11 +7,34 @@
     android:layout_height="match_parent"
     tools:context="james.mosley.com.pillar.ContactDetailActivity">
 
+
+
     <LinearLayout
         android:id="@+id/info_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/addMedToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="24dp"
+                    android:text="Community"
+                    android:id="@+id/myEditText"
+                    android:background="?attr/colorPrimary" />
+        </android.support.v7.widget.Toolbar>
 
         <ImageView
             android:id="@+id/ContactPhoto"

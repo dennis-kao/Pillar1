@@ -9,4 +9,5 @@
     <color name="accent">#FFC107</color>
     <color name="colorAccent">#FFC107</color>
     <color name="lightGrey">#efefef</color>
+    <color name="white">#ffffff</color>
 </resources>

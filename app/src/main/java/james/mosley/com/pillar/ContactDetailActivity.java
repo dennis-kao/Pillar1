@@ -17,7 +17,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_detail);
 
-        final Button addContactButton = findViewById(R.id.add_contact);
+        final Button addContactButton = (Button) findViewById(R.id.add_contact);
         final Contact contact = (Contact) getIntent().getSerializableExtra(Contact.EXTRA);
 
         TextView myText = (TextView) findViewById(R.id.name);
