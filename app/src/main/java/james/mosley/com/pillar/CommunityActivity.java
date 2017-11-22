@@ -64,4 +64,10 @@ public class CommunityActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void backButtonClickedCommunity(View view) {
+        //Intent intent = new Intent(this, MainActivity.class);
+        //startActivity(intent);
+        finish();
+    }
 }

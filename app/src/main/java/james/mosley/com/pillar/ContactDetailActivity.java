@@ -20,7 +20,7 @@ public class ContactDetailActivity extends AppCompatActivity {
         final Button addContactButton = (Button) findViewById(R.id.add_contact);
         final Contact contact = (Contact) getIntent().getSerializableExtra(Contact.EXTRA);
 
-        TextView myText = (TextView) findViewById(R.id.name);
+        TextView myText = (TextView) findViewById(R.id.contactName);
         myText.setText(contact.getName());
 
         myText = (TextView) findViewById(R.id.info);
@@ -64,6 +64,7 @@ public class ContactDetailActivity extends AppCompatActivity {
                 break;
         }
 
+
         addContactButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -98,4 +99,11 @@ public class ContactDetailActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void backButtonClicked(View view) {
+        //Intent intent = new Intent(this, CommunityActivity.class);
+        //startActivity(intent);
+        finish();
+    }
+
 }

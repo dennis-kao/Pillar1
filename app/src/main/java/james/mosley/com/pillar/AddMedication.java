@@ -1,12 +1,19 @@
 package james.mosley.com.pillar;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.View;
-import android.content.Intent;
-import java.util.*;
-import android.widget.*;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.Spinner;
+import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 public class AddMedication extends AppCompatActivity {
@@ -62,13 +69,17 @@ public class AddMedication extends AppCompatActivity {
     }
 
 
+    public void backButton(View view) {
+        finish();
+    }
 
     public void medicationSubmitted(View view) {
 
         //error message init.
         TextView error = (TextView) findViewById(R.id.errorMessage);
 
-        //Notification Information
+
+        // /Notification Information
         Switch notification = (Switch) findViewById(R.id.switch2);
         if (notification.isChecked()) {
             notificationStatus = true;

@@ -231,7 +231,8 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="11dp"
         android:background="@color/colorPrimary"
-        app:srcCompat="@drawable/ic_backarrow" />
+        app:srcCompat="@drawable/ic_backarrow"
+        android:onClick="backButton"/>
 
     <ImageButton
         android:id="@+id/checkButton"
