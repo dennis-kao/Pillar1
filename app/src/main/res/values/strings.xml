@@ -48,4 +48,7 @@
         <item>PM</item>
     </string-array>
 
+    <string name="add_string">Add to Contacts</string>
+    <string name="cancel_string">Cancel pending request</string>
+
 </resources>
