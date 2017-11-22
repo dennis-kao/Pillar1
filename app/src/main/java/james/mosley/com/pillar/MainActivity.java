@@ -49,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
 //        startActivity(toAddmediacton);
 
 
-        Intent toLogin = new Intent(this, LoginActivity.class);
-        startActivity(toLogin);
+        //Intent toLogin = new Intent(this, LoginActivity.class);
+        //startActivity(toLogin);
 
-        //Intent toAddmediacton = new Intent(this,AddMedication.class);
-        //startActivity(toAddmediacton);
+        Intent toAddmediacton = new Intent(this, CommunityActivity.class);
+        startActivity(toAddmediacton);
 
     }
 

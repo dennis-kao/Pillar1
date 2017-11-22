@@ -62,13 +62,17 @@ public class AddMedication extends AppCompatActivity {
     }
 
 
+    public void backButton(View view) {
+        finish();
+    }
 
     public void medicationSubmitted(View view) {
 
         //error message init.
         TextView error = (TextView) findViewById(R.id.errorMessage);
 
-        //Notification Information
+
+        // /Notification Information
         Switch notification = (Switch) findViewById(R.id.switch2);
         if (notification.isChecked()) {
             notificationStatus = true;
