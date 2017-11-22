@@ -5,7 +5,7 @@ package james.mosley.com.pillar.Shared;
  */
 
 public enum UserType {
-    PARTICIPANT,
-    STAFF,
-    ADMIN
+    Participant,
+    Staff,
+    Admin
 }
