@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
         String date = "20170101";
 
-        User newUser = new User("John","Doe","jd@pillar.ca","123-456-789","password", UserType.PARTICIPANT,date,1);
-        SessionInformation sessionInformation = new SessionInformation("null","5","token","neverlol", UserType.ADMIN.toString());
+        User newUser = new User("John","Doe","jd@pillar.ca","123-456-789","password", UserType.Participant,date,1);
+        SessionInformation sessionInformation = new SessionInformation("null","5","token","neverlol", UserType.Admin.toString());
 
         Medication med = new Medication();
         Community friends = new Community();
