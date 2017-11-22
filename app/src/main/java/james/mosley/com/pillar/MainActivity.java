@@ -44,8 +44,17 @@ public class MainActivity extends AppCompatActivity {
         MedicationListAdapter adapter = new MedicationListAdapter();
         recyclerView.setAdapter(adapter);
 
-        Intent toAddmediacton = new Intent(this,CommunityActivity.class);
-        startActivity(toAddmediacton);
+
+//        Intent toAddmediacton = new Intent(this,CommunityActivity.class);
+//        startActivity(toAddmediacton);
+
+
+        Intent toLogin = new Intent(this, LoginActivity.class);
+        startActivity(toLogin);
+
+        //Intent toAddmediacton = new Intent(this,AddMedication.class);
+        //startActivity(toAddmediacton);
+
     }
 
 }

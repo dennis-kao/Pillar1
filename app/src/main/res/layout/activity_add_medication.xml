@@ -383,7 +383,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:gravity="center_vertical"
-        android:text="haroon salimi"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="24sp" />
 
