@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         User newUser = new User("John","Doe","jd@pillar.ca","123-456-789","password", UserType.Participant,date,1);
 
 
+
         Medication med = new Medication();
         Community friends = new Community();
 
