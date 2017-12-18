@@ -1,14 +1,10 @@
 package james.mosley.com.pillar;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import java.util.*;
-
-
 
 public class Medication {
 
-    public enum DosageType {MG, ML, PUFFS, PILLS, DROPS}
+    public static enum DosageType {MG, ML, PUFFS, PILLS, DROPS}
 
     //Medication information
     private int medID = 0;

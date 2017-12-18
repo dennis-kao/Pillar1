@@ -1,3 +1,74 @@
 <resources>
     <string name="app_name">Pillar</string>
+
+    <string-array name="timesOfNotification">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="dosageType">
+        <item>Pills</item>
+        <item>ML</item>
+        <item>MG</item>
+        <item>Puffs</item>
+        <item>Drops</item>>
+    </string-array>
+
+    <string-array name="hours">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+
+    <string-array name="minutes">
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+
+    <string-array name="am_pm">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="add_string">Add to Contacts</string>
+    <string name="cancel_string">Cancel pending request</string>
+    <string name="title_activity_nav_drawer">NavDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
 </resources>

@@ -24,7 +24,19 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:appcompat-v7:26+'
+    implementation 'com.android.support:design:26+'
+
+    compile 'com.squareup.okhttp3:okhttp:3.+'
+
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.wandali:datepicker-timeline:master-SNAPSHOT'
+    compile 'com.android.support:cardview-v7:26+'
+    compile 'com.android.support:recyclerview-v7:26+'
     testCompile 'junit:junit:4.12'
+}
+
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
 }

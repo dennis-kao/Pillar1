@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profile" />
+        <item
+            android:id="@+id/schedule"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Schedule" />
+        <item
+            android:id="@+id/medication"
+            android:icon="@drawable/ic_medical_drug_pill"
+            android:title="Add Medication" />
+        <item
+            android:id="@+id/community"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Community" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+    </group>
+
+    <item android:title="Options">
+        <menu>
+            <item
+                android:id="@+id/contactCLC"
+                android:icon="@drawable/ic_call_black_24dp"
+                android:title="Contact CLC" />
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_reply_black_24dp"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
