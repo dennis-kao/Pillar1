@@ -1,4 +1,4 @@
-A wireframe for a medication intake tracking application our team built in CIS*3750.
+A wireframe for a medication intake tracking application our team built for a Software Engineering class, CIS*3750.
 
 The current app demonstrates the following features:
 
@@ -8,4 +8,4 @@ The current app demonstrates the following features:
 - A schedule page
 - A community page
 
-A fully functional version is planned to be released in 2018 called Pillar2.
+A fully functional version is in development.
